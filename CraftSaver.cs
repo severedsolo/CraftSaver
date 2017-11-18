@@ -8,7 +8,8 @@ using System.IO;
 
 namespace CraftSaver
 {
-    [KSPAddon(KSPAddon.Startup.SpaceCentre, true)]
+
+    [KSPAddon(KSPAddon.Startup.AllGameScenes, false)]
     public class CraftSaver : MonoBehaviour
     {
         public static CraftSaver instance;
@@ -28,7 +29,6 @@ namespace CraftSaver
 
         private void Awake()
         {
-            DontDestroyOnLoad(this);
             instance = this;
         }
 
